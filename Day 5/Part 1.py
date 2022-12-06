@@ -2,7 +2,7 @@ stack1 = ['W', 'M', 'L', 'F']
 stack2 = ['B', 'Z', 'V', 'M', 'F']
 stack3 = ['H', 'V', 'R', 'S', 'L', 'Q']
 stack4 = ['F', 'S', 'V', 'Q', 'P', 'M', 'T', 'J']
-stack5 = ['W', 'S', 'L']
+stack5 = ['L', 'S', 'W']
 stack6 = ['F', 'V', 'P', 'M', 'R', 'J', 'W']
 stack7 = ['J', 'Q', 'C', 'P', 'N', 'R', 'F']
 stack8 = ['V', 'H', 'P', 'S', 'Z', 'W', 'R', 'B']
@@ -25,7 +25,6 @@ for line in open("input.txt"):
         to_stack = int(move[5])
         
         for _ in range(quantity):
-            # subtract 1 from indices as stacks start at 1
             removed = stacks[from_stack-1].pop()
             stacks[to_stack-1].append(removed)
         
@@ -35,3 +34,4 @@ for stack in stacks:
     res += stack[-1]
     
 print(res)
+# VRWBSFZWM
